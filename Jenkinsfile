@@ -5,14 +5,14 @@ pipeline {
         stage("Install Software") {
             steps {
                 // Встановлення Mozilla Firefox
-                sh 'apt-get update'
-                sh 'apt-get install -y firefox'
+                sh 'sudo apt-get update'
+                sh 'sudo apt-get install -y firefox'
 
                 // Встановлення VLC
-                sh 'apt-get install -y vlc'
+                sh 'sudo apt-get install -y vlc'
 
                 // Встановлення Rhythmbox
-                sh 'apt-get install -y rhythmbox'
+                sh 'sudo apt-get install -y rhythmbox'
             }
         }
 
@@ -26,4 +26,3 @@ pipeline {
         }
     }
 }
-
